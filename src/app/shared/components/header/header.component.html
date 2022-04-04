@@ -1,0 +1,25 @@
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+    <div fxLayout="row" fxLayoutAlign="start center">
+        <button mat-icon-button (click)="sideBarToggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <img src="./../../../../assets/logo.png" alt="" width="32" height="32">
+    </div>
+    <div>
+        <button mat-icon-button >
+            <mat-icon>settings</mat-icon>
+        </button>
+        <button mat-icon-button >
+            <mat-icon>help_outline</mat-icon>
+        </button>
+        <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>person_outline</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>exit_to_app</mat-icon>
+                Sign out
+            </button>
+        </mat-menu>
+    </div>
+</mat-toolbar>
